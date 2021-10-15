@@ -6,7 +6,7 @@ namespace exam
     {
         static void Main(string[] args)
         {
-            string name, course, year, sem, subC, subD, profName, remarks;
+            string name, course, year, sem, subC, subD, profName, remarks, numEq;
             double monthlyG, fPrel, sPrel, mid, pre, final, average;
 
 
@@ -41,48 +41,72 @@ namespace exam
             Console.WriteLine("\n////////////////////////////////////////////////////////////////////////\n");
             //SUBJECT CODES
 
-            if (subC == "GE8" || subC == "ge8")
+            if (subC == "CC101" || subC == "cc101")
             {
-                subD = "Probabilities & Statistics";
-            } else if (subC == "GE7" || subC == "ge7")
+                subD = "INTRODUCTION TO COMPUTING";
+            } else if (subC == "CC102" || subC == "cc102")
             {
-                subD = "Speech and oral communication";
-            } else if (subC == "SDF104" || subC == "sdf104")
+                subD = "FUNDAMENTALS OF PROGRAMMING";
+            } else if (subC == "GE1" || subC == "ge1")
             {
-                subD = "Object oriented programming";
-            } else if (subC == "CC104" || subC == "cc104")
+                subD = "COMMUNICATION SKILLS 1";
+            } else if (subC == "GE2" || subC == "ge2")
             {
-                subD = "DATA STRUCTURES AND ALGORITHMS";
-            } else if (subC == "DS102" || subC == "ds102")
+                subD = "KOMUNIKASYON SA AKEDEMIKONG FILIPINO";
+            } else if (subC == "GE3" || subC == "ge3")
             {
-                subD = "DISCRETE STRUCTURES 2";
-            } else if (subC == "PE3" || subC == "pe3")
+                subD = "COLLEGE ALGEBRA";
+            } else if (subC == "NSTP1" || subC == "nstp1")
             {
-                subD = "INDIVIDUAL & DUAL SPORTS";
-            } else 
+                subD = "NATIONAL SERVICE TRAINING PROGRAM 2";
+            } else if (subC == "PE1" || subC == "pe1") {
+                subD = "PHYSICAL FITNESS";
+            } else if (subC == "CC103" || subC == "cc103")
             {
-                subD = "INVALID OUTPUT";
+                subD = "INTERMEDIATE PROGRAMMING";
+            } else if (subC == "GE4" || subC == "ge4")
+            {
+                subD = "COMMUNICATION SKILLS 2";
+            } else if (subC == "GE5" || subC == "ge5")
+            {
+                subD = "PAGBASA AT PAG SULAT TUNGO SA PANANALIKSIK";
+            } else if (subC == "GE6" || subC == "ge6")
+            {
+                subD = "ART APPRECIATION";
+            } else if (subC == "DS101" || subC == "DS101")
+            {
+                subD = "DIISCRETE STRUCTION 1";
+            } else if (subC == "NSTP2" || subC == "nstp2")
+            {
+                subD = "NATIONAL SERVICE TRAINING PROGRAM 2";
+            } else if (subC == "PE2" || subC == "pe2")
+            {
+                subD = "RHYTMIC ACTIVITIES";
             }
 
+
             //COURSES
-            if (course == "BSCS" || course == "bscs")
+            if (course == "BSCS" || course == "bscs")//
             {
                 course = "BACHELOR OF SCIENCE IN COMPUTER SCIENCE";
             } else if (course == "BSHRM" || course == "bshrm")
             {
                 course = "BACHELOR OF SCIENCE IN HOTEL & RESTAURANT MANAGEMENT";
-            } else if (course == "BSTM" || course == "bstm")
+            } else if (course == "BSTM" || course == "bstm")//
             {
                 course = "BACHELOR OF SCIENCE IN TOURISM MANAGEMENT";
-            } else if (course == "BSBA" || course == "bsba")
+            } else if (course == "BSBA" || course == "bsba")//
             {
                 course = "BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION";
-            } else if (course == "BEE" || course == "bee")
+            } else if (course == "BEED" || course == "beed")//
             {
                 course = "BACHELOR OF ELEMENTARY EDUCATION";
-            } else if (course == "BSED" || course == "bsed")
+            } else if (course == "BSED MATH" || course == "bsed math")//
             {
-                course = "BACHELOR OF SECONDARY EDUCATION";
+                course = "BACHELOR OF SECONDARY EDUCATION MAJOR IN MATHEMATICS";
+            } else if (course == "ABPOLSCI" || course == "abpolsci")//
+            {
+                course = "BBACHELOR OF ARTS IN POLITICAL SCIENCE";
             } else
             {
                 course = "INVALID INPUT";
@@ -99,6 +123,7 @@ namespace exam
             Console.WriteLine("\n////////////////////////////////////////////////////////////////////////\n");
             average = (monthlyG + fPrel + sPrel + mid + pre + final) / 6;
 
+
             if (average >= 75 && average <= 100)
             {
                 remarks = "PASSED";
@@ -112,8 +137,42 @@ namespace exam
                 remarks = "INVALID OUTPUT";
             }
 
+            if (average >= 75 && average <= 100)
+            {
+                numEq = "1.00 EXCELLENT";
+            } else if (average >= 94 && average <= 96)
+            {
+                numEq = "1.25 EXCELLENT";
+            } else if (average >= 91 && average <= 93)
+            {
+                numEq = "1.50 VERY GOOD";
+            } else if (average >= 88 && average <= 90)
+            {
+                numEq = "1.75 very good";
+            } else if (average >= 85 && average <= 87)
+            {
+                numEq = "2.00 GOOD";
+            } else if (average >= 82 && average <= 84)
+            {
+                numEq = "2.25 GOOD";
+            } else if (average >= 79 && average <= 81)
+            {
+                numEq = "2.50 SATISFACTORY";
+            } else if (average >= 76 && average <= 78)
+            {
+                numEq = "2.75 SATISFACTORY";
+            } else if (average >= 75)
+            {
+                numEq = "3.00 PASSING";
+            } else
+            {
+                numEq = "5.00 FAILURE";
+            }
+
+            Console.WriteLine("NUMERIC EQUIVALENT: " + numEq);
             Console.WriteLine("AVERAGE GRADES: " + average);
             Console.WriteLine("REMARKS: " + remarks);
+
         }
     }
 }
