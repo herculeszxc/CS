@@ -91,8 +91,9 @@ namespace exam
             Console.WriteLine("FULLNAME: " + name);
             Console.WriteLine("COURSE: " + course);
             Console.WriteLine("YEAR: " + year + " YEAR");
-            Console.WriteLine("SEMESTER: " + course + " SEMESTER");
-            Console.WriteLine("SUBJECT CODE: " + subD);
+            Console.WriteLine("SEMESTER: " + sem + " SEMESTER");
+            Console.WriteLine("SUBJECT CODE: " + subC);
+            Console.WriteLine("SUBJECT DESCRIPTION: " + subD);
             Console.WriteLine("PROFESSOR NAME: " + profName);
 
             Console.WriteLine("\n////////////////////////////////////////////////////////////////////////\n");
