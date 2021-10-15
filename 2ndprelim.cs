@@ -82,6 +82,9 @@ namespace exam
             } else if (subC == "PE2" || subC == "pe2")
             {
                 subD = "RHYTMIC ACTIVITIES";
+            } else
+            {
+                subD = "INVALID INPUT"; 
             }
 
 
@@ -123,12 +126,12 @@ namespace exam
             Console.WriteLine("\n////////////////////////////////////////////////////////////////////////\n");
             average = (monthlyG + fPrel + sPrel + mid + pre + final) / 6;
 
-
+                
             if (average >= 75 && average <= 100)
             {
                 remarks = "PASSED";
             }
-            else if (average >= 65 && average <= 74)
+            else if (average <=74 && average >= 65)
             {
                 remarks = "FAILED";
             }
@@ -137,7 +140,7 @@ namespace exam
                 remarks = "INVALID OUTPUT";
             }
 
-            if (average >= 75 && average <= 100)
+            if (average >= 97 && average <= 100)
             {
                 numEq = "1.00 EXCELLENT";
             } else if (average >= 94 && average <= 96)
